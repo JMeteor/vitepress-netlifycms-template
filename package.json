@@ -11,6 +11,12 @@
   "author": "Jerzy Meteor",
   "license": "ISC",
   "devDependencies": {
+    "postcss-nesting": "^10.1.2",
     "vitepress": "^0.21.6"
+  },
+  "postcss": {
+    "plugins": {
+      "postcss-nesting": {}
+    }
   }
 }
