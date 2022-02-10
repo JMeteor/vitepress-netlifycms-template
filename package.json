@@ -1,4 +1,15 @@
 {
+  "name": "vitepress-netlifycms-template",
+  "version": "1.0.0",
+  "description": "repo for rapid scafolding of VitePress website with support of NetlifyCMS - open source content management from Netlify",
+  "main": "index.js",
+  "scripts": {
+    "docs:dev": "vitepress dev docs",
+    "docs:build": "vitepress build docs",
+    "docs:serve": "vitepress serve docs"
+  },
+  "author": "Jerzy Meteor",
+  "license": "ISC",
   "devDependencies": {
     "vitepress": "^0.21.6"
   }
