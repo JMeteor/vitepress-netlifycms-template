@@ -6,15 +6,13 @@
   <main>
     <Content />
   </main>
-  <footer>
-    Site Footer
-  </footer>
+  <footer>Site Footer</footer>
 </template>
 
 <script>
 export default {
-  name: "Layout"
-}
+  name: "Layout",
+};
 </script>
 
 <style src="./main.css" />
