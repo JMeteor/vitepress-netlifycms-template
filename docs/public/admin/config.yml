@@ -1,0 +1,68 @@
+backend:
+  name: github
+  repo: JMeteor/vitepress-netlifycms-template
+  branch: main
+media_folder: "docs/public/media"
+public_folder: "/media"
+publish_mode: editorial_workflow
+collections:
+  - name: "homepage"
+    label: "Homepage"
+    file: "docs/index.md"
+    delete: false
+    fields:
+      - { label: "Home", name: "home", widget: "hidden", default: true }
+      - {
+        label: "Hero image",
+        name: "heroImage",
+        widget: "image",
+        required: false,
+      }
+      - { label: "Hero text", name: "heroText", widget: "string" }
+      - {
+        label: "Tagline",
+        name: "tagline",
+        widget: "string",
+        required: false,
+      }
+      - { label: "Action text", name: "actionText", widget: "string" }
+      - { label: "Action link", name: "actionLink", widget: "string" }
+      - label: Features
+        name: features
+        widget: list
+        fields:
+          - { label: "Title", name: "title", widget: "string" }
+          - { label: "Details", name: "details", widget: "string" }
+      - {
+        label: "Footer",
+        name: "footer",
+        widget: "string",
+        required: false,
+      }
+      - { label: "Body", name: body, widget: markdown, required: false }
+  - name: "blog" # Used in routes, e.g., /admin/collections/blog
+    label: "Blog" # Used in the UI
+    folder: "docs/_posts" # The path to the folder where the documents are stored
+    create: true # Allow users to create new documents in this collection
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}}" # Filename template, e.g., YYYY-MM-DD-title.md
+    fields: # The fields for each document, usually in front matter
+      - { label: "Layout", name: "layout", widget: "hidden", default: "blog" }
+      - { label: "Title", name: "title", widget: "string" }
+      - { label: "Publish Date", name: "date", widget: "datetime" }
+      - { label: "Featured Image", name: "thumbnail", widget: "image" }
+      - { label: "Rating (scale of 1-5)", name: "rating", widget: "number" }
+      - { label: "Body", name: "body", widget: "markdown" }
+  - name: "roster"
+    label: "Roster"
+    folder: "docs/_roster"
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - { label: "Layout", name: "layout", widget: "hidden", default: "roster" }
+      - { label: "Title", name: "title", widget: "string" }
+      - { label: "Name", name: "name", widget: "string" }
+      - { label: "Genre", name: "genre", widget: "string" }
+      - { label: "City", name: "city", widget: "string" }
+      - { label: "Feature Image", name: "cover", widget: "image" }
+      - { label: "Thumbnail", name: "thumbnail", widget: "image" }
+      - { label: "Body", name: "body", widget: "markdown" }
