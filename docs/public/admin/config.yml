@@ -8,7 +8,7 @@ publish_mode: editorial_workflow
 collections:
   - name: "homepage"
     label: "Homepage"
-    file: "docs/index.md"
+    folder: "docs/index.md"
     delete: false
     fields:
       - { label: "Home", name: "home", widget: "hidden", default: true }
@@ -27,12 +27,6 @@ collections:
       }
       - { label: "Action text", name: "actionText", widget: "string" }
       - { label: "Action link", name: "actionLink", widget: "string" }
-      - label: Features
-        name: features
-        widget: list
-        fields:
-          - { label: "Title", name: "title", widget: "string" }
-          - { label: "Details", name: "details", widget: "string" }
       - {
         label: "Footer",
         name: "footer",
